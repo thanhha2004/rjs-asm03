@@ -1,0 +1,8 @@
+.category {
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Sử dụng transition cho hiệu ứng mượt mà */
+  }
+  
+  .category:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+  }
