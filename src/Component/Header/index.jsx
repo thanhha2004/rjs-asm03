@@ -1,7 +1,28 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 function Header() {
+  const navigate = useNavigate();
+  const [checkLog, setLog] = useState(true);
+  useEffect(() => {
+    // Lấy dữ liệu từ localStorage
+    const storedUser = localStorage.getItem('ON_LOGIN');
+    console.log(storedUser)
+    if (storedUser != null) {
+      setLog(false);
+    }
+    else {
+      setLog(true)
+    }
+  }, []);
+  const logOut = () => {
+    localStorage.removeItem('ON_LOGIN');
+    navigate('/login');
+  }
+  const logIn = () => {
+    navigate('/login');
+  }
   return (
     <header className="root">
       <nav className="navbar navbar-expand-lg navbar-light bg-light root-header">
@@ -38,9 +59,11 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/login" className="nav-link">
-                  Login
-                </Link>
+              {checkLog ? (
+                    <button onClick={logIn} className="nav-link poi">Login</button>
+                  ) : (
+                    <button onClick={logOut} className="nav-link">Logout</button>
+                  )}
               </li>
             </ul>
           </div>
