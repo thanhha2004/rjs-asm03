@@ -38,7 +38,7 @@ function CartPage() {
           </thead>
           <tbody>
             <tr>
-              <td><img src={data[1].img1} alt='' className='image-product'/></td>
+              <td><img src='https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FCCDN%2FReactJS%2FAssignment_Images%2FASM03_Resources%2Fiphone_13_4.jpeg?alt=media&token=dc72dde3-cfa4-4710-9493-ac2aa0ecf249' alt='' className='image-product'/></td>
               <td>Apple Iphone 11 64GB</td>
               <td>10.9999 VND</td>
               <td>1</td>
@@ -46,7 +46,7 @@ function CartPage() {
               <td><img src={trash} alt='' className='icon-css'/></td>
             </tr>
             <tr>
-              <td><img src={data[7].img1} alt='' className='image-product'/></td>
+              <td><img src='https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FCCDN%2FReactJS%2FAssignment_Images%2FASM03_Resources%2Fairpod_1_1.jpeg?alt=media&token=33b2ebdd-086c-4b8e-9241-0b566ca66754"' alt='' className='image-product'/></td>
               <td>Apple AirPods 3rd gen</td>
               <td>4.390.000 VND</td>
               <td>2</td>
@@ -65,6 +65,10 @@ function CartPage() {
             <label>Total</label>
             <span>19.779.000 VND</span>
           </div>
+          <div class="form-floating mt-3">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Enter your coupon" />
+          </div>
+          <button class="btn btn-secondary w-100 mt-3">Apply coupon</button>
         </div>
       </div>
     </div>
